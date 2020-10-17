@@ -6,3 +6,5 @@ exports.viewAllClothes = async (req, res) => {
   res.send(data);
 }
 
+
+
