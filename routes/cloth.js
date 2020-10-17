@@ -1,5 +1,7 @@
 const router = require('express').Router();
+const clothController = require('../controllers/cloth');
 
-router.get("/", (req, res) => res.send('Product Home Page'));
+
+router.get("/", clothController.viewAllClothes);
 
 module.exports = router;

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const { Schema, Model } = mongoose;
+const { Schema } = mongoose;
 
 const clothSectionSchema = new Schema({
   title: {
@@ -13,4 +13,4 @@ const clothSectionSchema = new Schema({
   },
 })
 
-module.exports = ClothSectionSchema = Model('clothSection', clothSectionSchema);
+module.exports = ClothSectionSchema = mongoose.model('clothSection', clothSectionSchema);
