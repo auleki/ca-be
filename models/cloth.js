@@ -5,7 +5,8 @@ const { Schema } = mongoose;
 const clothSchema = new Schema({
   name: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   category: {
     type: String,
@@ -15,6 +16,14 @@ const clothSchema = new Schema({
     type: Number,
     required: true
   },
+  orderLink: {
+    type: String,
+    required: true
+  },
+  imgUrl: {
+    type: String,
+    required: true
+  }
 })
 
 const ClothSchema = mongoose.model('cloth', clothSchema);
