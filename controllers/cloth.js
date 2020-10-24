@@ -26,12 +26,5 @@ exports.addCloth = async (req, res) => {
         res.send(data)
         mongoose.connection.close();
       })
-      .catch(e => console.log('error saving', e))
-
-    
-  
-    
-  
+      .catch(e => console.log('error saving', e))  
 }
-
-

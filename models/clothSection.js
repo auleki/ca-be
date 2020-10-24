@@ -8,7 +8,7 @@ const clothSectionSchema = new Schema({
     required: true
   },
   products: {
-    type: Array, 
+    type: [], 
     required: true
   },
 })
