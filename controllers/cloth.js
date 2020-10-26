@@ -2,9 +2,11 @@
 const cSModel = require('../models/clothSection');
 const clothModel = require('../models/cloth');
 const mongoose = require('mongoose');
+const axios = require('axios');
 
 exports.viewAllClothes = async (req, res) => {
-  const data = await clothModel.find({});
+  // const data = await clothModel.find({});
+  
   res.send(data);
 }
 

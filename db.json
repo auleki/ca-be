@@ -1,0 +1,178 @@
+{
+  "clothing": [
+    {
+      "title": "Sweatshirts",
+      "products": [
+        {
+          "name": "Sweat 01",
+          "price": 12000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20sweatshirt%20for%20N12,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239437/sweat01-removebg_kalqrc.png"
+        },
+        {
+          "name": "Sweat 02",
+          "price": 12000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20sweatshirt%20for%20N12,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239432/sweat02_1t_tb5fde.png"
+        },
+        {
+          "name": "Sweat 03",
+          "price": 12000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20sweatshirt%20for%20N12,000",
+          "imageUrl": ""
+        },
+        {
+          "name": "Sweat 04",
+          "price": 12000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20sweatshirt%20for%20N12,000",
+          "imageUrl": ""
+        }
+      ]
+
+    },
+    {
+      "title": "Polos",
+      "products": [
+        {
+          "name": "Polo 01",
+          "price": 11000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20navy%20blue%20polo%20for%20N11,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239416/polo01_1_onkfll.png"
+        },
+        {
+          "name": "Polo 02",
+          "price": 13000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20polo%20for%20N13,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239416/polo02_1_zmphid.png"
+        },
+        {
+          "name": "Polo 03",
+          "price": 13000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20polo%20for%20N13,000",
+          "imageUrl": ""
+        },
+        {
+          "name": "Polo 04",
+          "price": 13000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20polo%20for%20N13,000",
+          "imageUrl": ""
+        },
+        {
+          "name": "Polo 05",
+          "price": 13000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20polo%20for%20N13,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239418/polo05_1_dfhpis.png"
+        },
+        {
+          "name": "Polo 06",
+          "price": 11000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20navy%20blue%20polo%20for%20N11,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239421/polo06_1_amylhf.png"
+        },
+      ]
+
+    },
+    {
+      "title": "T-Shirts",
+      "products": [
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "",
+          "imageUrl": ""
+        },
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "",
+          "imageUrl": ""
+        },
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "",
+          "imageUrl": ""
+        },
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "",
+          "imageUrl": ""
+        },
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "",
+          "imageUrl": ""
+        },
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "",
+          "imageUrl": ""
+        },
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "",
+          "imageUrl": ""
+        }
+      ]
+
+    },
+    {
+      "title": "Shorts",
+      "products": [
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
+          "imageUrl": ""
+        },
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
+          "imageUrl": ""
+        },
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
+          "imageUrl": ""
+        },
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
+          "imageUrl": ""
+        },
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
+          "imageUrl": ""
+        },
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
+          "imageUrl": ""
+        }
+      ]
+
+    },
+    {
+      "title": "Joggers",
+      "products": [
+        {
+          "name": "",
+          "price": , 
+          "orderLink": "",
+          "imageUrl": ""
+        }
+      ]
+
+    }
+  ]
+}
