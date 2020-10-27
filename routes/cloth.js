@@ -1,5 +1,12 @@
 const router = require('express').Router();
+const fs = require('fs');
 const clothController = require('../controllers/cloth');
+
+// router.get('/', (req, res) => {
+//   // res.sendFile(__dirname, 'data.json')
+//   const data = JSON.parse(fs.readFileSync('/app.js', 'utf8'))
+//   res.send(data)
+// })
 
 
 router.get("/", clothController.viewAllClothes);

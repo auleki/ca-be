@@ -19,13 +19,19 @@
           "name": "Sweat 03",
           "price": 12000, 
           "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20sweatshirt%20for%20N12,000",
-          "imageUrl": ""
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239433/sweat03_1_citj9x.png"
         },
         {
           "name": "Sweat 04",
           "price": 12000, 
           "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20sweatshirt%20for%20N12,000",
-          "imageUrl": ""
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239432/sweat04_1_gquhex.png"
+        },
+        {
+          "name": "Sweat 05",
+          "price": 12000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20sweatshirt%20for%20N12,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239431/sweat05_1_jofsp6.png"
         }
       ]
 
@@ -49,13 +55,13 @@
           "name": "Polo 03",
           "price": 13000, 
           "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20polo%20for%20N13,000",
-          "imageUrl": ""
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239416/polo03_1_upvwyk.png"
         },
         {
           "name": "Polo 04",
           "price": 13000, 
           "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20red%20polo%20for%20N13,000",
-          "imageUrl": ""
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239415/polo04_1_taolig.png"
         },
         {
           "name": "Polo 05",
@@ -68,7 +74,7 @@
           "price": 11000, 
           "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20navy%20blue%20polo%20for%20N11,000",
           "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239421/polo06_1_amylhf.png"
-        },
+        }
       ]
 
     },
@@ -76,46 +82,40 @@
       "title": "T-Shirts",
       "products": [
         {
-          "name": "",
-          "price": , 
-          "orderLink": "",
-          "imageUrl": ""
+          "name": "T-Shirt 01",
+          "price": 10000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20shirt%20for%20N10,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239418/shirt01_1_gmexzt.png"
         },
         {
-          "name": "",
-          "price": , 
-          "orderLink": "",
-          "imageUrl": ""
+          "name": "T-Shirt 02",
+          "price": 10000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20shirt%20for%20N10,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239419/shirt02_1_tcygjl.png"
         },
         {
-          "name": "",
-          "price": , 
-          "orderLink": "",
-          "imageUrl": ""
+          "name": "T-Shirt 03",
+          "price": 10000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20shirt%20for%20N10,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601414422/shirt03_1_n15cns.png"
         },
         {
-          "name": "",
-          "price": , 
-          "orderLink": "",
-          "imageUrl": ""
+          "name": "T-Shirt 04",
+          "price": 10000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20shirt%20for%20N10,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239419/shirt04_1_jz01yh.png"
         },
         {
-          "name": "",
-          "price": , 
-          "orderLink": "",
-          "imageUrl": ""
+          "name": "T-Shirt 05",
+          "price": 10000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20shirt%20for%20N10,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239422/shirt05_1_mlixb0.png"
         },
         {
-          "name": "",
-          "price": , 
-          "orderLink": "",
-          "imageUrl": ""
-        },
-        {
-          "name": "",
-          "price": , 
-          "orderLink": "",
-          "imageUrl": ""
+          "name": "T-Shirt 06",
+          "price": 10000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20shirt%20for%20N10,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239422/shirt06_1_yg1v5r.png"
         }
       ]
 
@@ -124,40 +124,34 @@
       "title": "Shorts",
       "products": [
         {
-          "name": "",
-          "price": , 
+          "name": "Shorts 01",
+          "price": 10000, 
           "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
-          "imageUrl": ""
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239425/short01_1_msacwv.png"
         },
         {
-          "name": "",
-          "price": , 
+          "name": "Shorts 02",
+          "price": 10000, 
           "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
-          "imageUrl": ""
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239423/short02_1_mrlf6o.png"
         },
         {
-          "name": "",
-          "price": , 
+          "name": "Shorts 03",
+          "price": 10000, 
           "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
-          "imageUrl": ""
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239424/short03_1_n62szh.png"
         },
         {
-          "name": "",
-          "price": , 
+          "name": "Shorts 04",
+          "price": 10000, 
           "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
-          "imageUrl": ""
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239428/short04_1_axqil2.png"
         },
         {
-          "name": "",
-          "price": , 
+          "name": "Shorts 05",
+          "price": 10000, 
           "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
-          "imageUrl": ""
-        },
-        {
-          "name": "",
-          "price": , 
-          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20green%20shorts%20for%20N10,000",
-          "imageUrl": ""
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239429/short05_1_djdirw.png"
         }
       ]
 
@@ -166,10 +160,16 @@
       "title": "Joggers",
       "products": [
         {
-          "name": "",
-          "price": , 
-          "orderLink": "",
-          "imageUrl": ""
+          "name": "Joggers 01",
+          "price": 11000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20jogger%20for%20N11,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239415/joggers01_1_adf50r.png"
+        },
+        {
+          "name": "Joggers 02",
+          "price": 11000, 
+          "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20jogger%20for%20N11,000",
+          "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239416/joggers02_1_kcaimq.png"
         }
       ]
 

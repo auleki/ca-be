@@ -1,32 +1,52 @@
 // cSModel - Cloth Section Model 
-const cSModel = require('../models/clothSection');
+const clothSectionModel = require('../models/clothSection');
 const clothModel = require('../models/cloth');
 const mongoose = require('mongoose');
 const axios = require('axios');
 
+
 exports.viewAllClothes = async (req, res) => {
-  // const data = await clothModel.find({});
+  // const dbUrl = 'http://localhost:5000/clothing'
+  try {
+    const data = await clothSectionModel.find({}); 
+    res.send(data);
+  } catch (error) {
+    res.send(error);
+  }
   
-  res.send(data);
+  
+  
 }
 
 exports.addCloth = async (req, res) => {
-  // try {
-    const newCloth = new clothModel({
-      name: "Green Jungles",
-      category: "Shorts",
-      price: 4000,
-      imgUrl: 'use this for now',
-      orderLink: 'order via whats app'
-    })
 
-    const savedCloth = await newCloth.save();
-    
-    savedCloth
-      .then(data => {
-        console.log('note saved');
-        res.send(data)
-        mongoose.connection.close();
+    try {
+
+      const newSection = new clothSectionModel(    {
+        "title": "Joggers",
+        "products": [
+          {
+            "name": "Joggers 01",
+            "price": 11000, 
+            "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20jogger%20for%20N11,000",
+            "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239415/joggers01_1_adf50r.png"
+          },
+          {
+            "name": "Joggers 02",
+            "price": 11000, 
+            "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20jogger%20for%20N11,000",
+            "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239416/joggers02_1_kcaimq.png"
+          }
+        ]
+  
       })
-      .catch(e => console.log('error saving', e))  
+
+    const savedSection = await newSection.save();
+    mongoose.connection.close();
+    res.send(savedSection);
+
+    } catch (error) {
+      res.send(error)
+    }
+ 
 }

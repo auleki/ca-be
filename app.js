@@ -30,9 +30,11 @@ app.use(morgan('dev'));
 
 
 
-app.use('/clothing', clothRouter);
+app.use('/api/clothing', clothRouter);
 
 const PORT = process.env.PORT || 5000;
+// const PORT = 3000
+
 
 
 app.listen(PORT, () => console.log('Server up @ PORT ' + PORT))
