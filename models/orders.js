@@ -1,28 +1,27 @@
 const mongoose = require('mongoose');
 
-const { Schema } = mongoose 
+const { Schema } = mongoose
 
-const createOrderSchema = new Schema({
+const orderSchema = new Schema({
   id: {
     type: Number,
-    required: true
-  }, 
+    // required: true
+  },
   products: {
     type: [],
     required: true
   },
   discountCode: {
-    type: String,
-    max: 15
+    type: String | null
   },
   orderNumber: {
     type: String,
     required: true
-  },  
-  price: {
-    type: Number, 
+  },
+  toalPrice: {
+    type: Number,
     required: true
-  }, 
+  },
   // phone number, email, name
   userInfo: {
     type: {},
@@ -36,7 +35,9 @@ const createOrderSchema = new Schema({
   delivered: {
     type: Boolean,
     default: false
-  }  
+  }
 })
 
-module.exports = createOrderSchema = mongoose.model('order', createOrderSchema)
+const OrderSchema = mongoose.model('order', orderSchema)
+
+module.exports = OrderSchema;

@@ -22,7 +22,7 @@ exports.addCloth = async (req, res) => {
 
     try {
 
-      const newSection = new clothSectionModel(    {
+      const newSection = new clothSectionModel({
         "title": "Joggers",
         "products": [
           {

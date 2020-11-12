@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 
 // Imports 
 const clothRouter = require('./routes/cloth');
+const orderRouter = require('./routes/orders');
 
 const DB_URL = process.env.MONGODB_URL;
 
@@ -26,7 +27,18 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
-app.use('/api/clothing', clothRouter);
+const baseUrl = '/api'
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
+app.use(`${baseUrl}/clothing`, clothRouter);
+app.use(`${baseUrl}/orders`, orderRouter)
+
 
 const PORT = process.env.PORT || 5000;
 
