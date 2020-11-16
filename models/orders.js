@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 
+
 const { Schema } = mongoose
 
 const orderSchema = new Schema({
   id: {
     type: Number,
-    // required: true
+    required: true
   },
   products: {
     type: [],
@@ -18,7 +19,7 @@ const orderSchema = new Schema({
     type: String,
     required: true
   },
-  toalPrice: {
+  price: {
     type: Number,
     required: true
   },
