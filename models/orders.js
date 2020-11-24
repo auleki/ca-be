@@ -36,6 +36,10 @@ const orderSchema = new Schema({
   delivered: {
     type: Boolean,
     default: false
+  },
+  paid: {
+    type: Boolean,
+    default: false
   }
 })
 
