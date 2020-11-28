@@ -1,13 +1,8 @@
 const mongoose = require('mongoose');
 
-
 const { Schema } = mongoose
 
 const orderSchema = new Schema({
-  id: {
-    type: Number,
-    required: true
-  },
   products: {
     type: [],
     required: true
@@ -40,6 +35,10 @@ const orderSchema = new Schema({
   paid: {
     type: Boolean,
     default: false
+  },
+  inStock: {
+    type: Boolean,
+    default: true
   }
 })
 
