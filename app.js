@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 // Imports 
 const clothRouter = require('./routes/cloth');
 const orderRouter = require('./routes/orders');
+const userRouter = require('./routes/user')
 
 const DB_URL = process.env.MONGODB_URL;
 
@@ -39,8 +40,10 @@ app.use(function(req, res, next) {
 app.use(`${baseUrl}/clothing`, clothRouter);
 app.use(`${baseUrl}/orders`, orderRouter)
 app.use(`${baseUrl}/quiz`, orderRouter)
+app.use(`${baseUrl}/user`, userRouter)
+
 
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log('Server up @ PORT ' + PORT))
+app.listen(PORT, () => console.log(`Server up @ http://localhost:${PORT}`))

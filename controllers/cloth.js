@@ -13,9 +13,6 @@ exports.viewAllClothes = async (req, res) => {
   } catch (error) {
     res.send(error);
   }
-  
-  
-  
 }
 
 exports.addCloth = async (req, res) => {
