@@ -38,6 +38,7 @@ app.use(function(req, res, next) {
 
 app.use(`${baseUrl}/clothing`, clothRouter);
 app.use(`${baseUrl}/orders`, orderRouter)
+app.use(`${baseUrl}/quiz`, orderRouter)
 
 
 const PORT = process.env.PORT || 5000;
