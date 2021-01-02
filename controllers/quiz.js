@@ -2,8 +2,7 @@
 const User = require("../models/user")
 const mongoose = require('mongoose')
 
-//? NO FUNCTIONS TO EXPORT YET 
-
+//ANCHOR FUNCTIONS
 
 exports.saveQuizUser = async (req, res) => {
     try {
@@ -29,9 +28,9 @@ exports.showUsers = async (req, res) => {
 
 exports.findQuizUser = async (req, res) => {
     try {
-        const user = req.body.username
+        const user = await req.params.username
         const foundUser = await User.findOne({ username: user })
-        res.json({user: foundUser, username: user})
+        res.json(foundUser)
     } catch (error) {
         res.json(error)
     }

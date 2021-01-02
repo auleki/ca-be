@@ -40,7 +40,7 @@ app.use(function(req, res, next) {
 const baseUrl = '/api'
 app.use(`${baseUrl}/clothing`, clothRouter);
 app.use(`${baseUrl}/orders`, orderRouter)
-app.use(`${baseUrl}/user`, userRouter)
+app.use(`${baseUrl}/users`, userRouter)
 app.use(`${baseUrl}/quiz`, quizRouter)
 
 const PORT = process.env.PORT || 5000;

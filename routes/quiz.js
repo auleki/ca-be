@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const quizController = require('../controllers/quiz');
 
+router.get('/start/:username', quizController.findQuizUser)
 router.post('/start', quizController.saveQuizUser)
 router.get('/start', quizController.showUsers)
-router.post('/start/:username', quizController.findQuizUser)
+
 module.exports = router 
