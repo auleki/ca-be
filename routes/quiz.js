@@ -1,4 +1,7 @@
 const router = require('express').Router();
-const userController = require('../controllers/user');
+const quizController = require('../controllers/quiz');
 
+router.post('/start', quizController.saveQuizUser)
+router.get('/start', quizController.showUsers)
+router.post('/start/:username', quizController.findQuizUser)
 module.exports = router 

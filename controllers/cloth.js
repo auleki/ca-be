@@ -20,7 +20,7 @@ exports.addCloth = async (req, res) => {
     try {
 
       const newSection = new clothSectionModel({
-        "title": "Joggers",
+        "title": "Robes",
         "products": [
           {
             "name": "Joggers 01",
@@ -29,7 +29,7 @@ exports.addCloth = async (req, res) => {
             "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239415/joggers01_1_adf50r.png"
           },
           {
-            "name": "Joggers 02",
+            "name": "Elo Wears",
             "price": 11000, 
             "orderLink": "https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20jogger%20for%20N11,000",
             "imageUrl": "https://res.cloudinary.com/checkadigs/image/upload/v1601239416/joggers02_1_kcaimq.png"
