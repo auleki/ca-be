@@ -10,7 +10,7 @@ exports.saveQuizUser = async (req, res) => {
         const newUser = new User(currentUser)
         const savedUser = await newUser.save()
         res.send('User saved')
-        // res.send(savedUser)
+      e  // res.send(savedUser)
         mongoose.connect.close()
     } catch (error) {
         res.json({errorMsg: error})
