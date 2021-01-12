@@ -6,10 +6,12 @@ const { Schema } = mongoose
 const quizModel = Schema({
     question: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true
+        required: true,
+        ref: 'Question'
     }, 
     user: {
         type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
         required: true
     },
     currentScore: {

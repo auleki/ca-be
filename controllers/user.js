@@ -1,30 +1,31 @@
-const userModel = require("../models/user");
+const UserModel = require("../models/user");
+const ClothingModel = require("../models/clothSection")
 const mongoose = require("mongoose");
 
 exports.saveUser = async (req, res) => {
   // const { email, firstName, lastName, scores } = req.body;
   try {
-    const { username, firstName, lastName, score } = req.body
-    const userObject = {
-      username,
-      firstName, 
-      lastName,
-      score
-    }
-    console.log(userObject)
-    const User = new userModel(userObject);
-    const savedUser = await User.save();
-    res.send('User has been saved');
-    // mongoose.connect.close();
-  } catch (error) {
+    const newUser = new UserModel({
+      username: "jai@giwa.com",
+      firstName: "Marion",
+      lastName: "Lerwin",
+      scores: [10, 40, 49]
+    })
+    const savedUser = await newUser.save()
+    res.json(savedUser)
+  } 
+  catch (error) {
       res.send(error)
+      console.log(error)
   }
 };
 
 exports.findUser = async (req, res) => {
     try {
         const { username } = req.params
-        const currentUser = userModel.findOne({ email: username })
+        const currentUser = UserModel.findOne({ 
+          email: username 
+        })
         res.send(currentUser)
     } catch (error) {
         res.send(error)
@@ -32,5 +33,13 @@ exports.findUser = async (req, res) => {
 }
 
 exports.viewUsers = async (req, res) => {
-  res.json({ msg: "BOOYA!" })
+  try {
+    const users = await UserModel.find({})
+    // const clothes = await ClothingModel.find({})
+    // res.json(clothes)
+    res.json(users)
+    // res.json({ msg: "No users" })
+  } catch (error) {
+    res.json(error)
+  }
 }
