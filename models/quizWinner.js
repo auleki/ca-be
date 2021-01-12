@@ -6,6 +6,10 @@ const quizWinnerSchema = new Schema({
     type: String,
     required: true,
     scores: []
+  },
+  wonAt: {
+    type: Date,
+    default: Date.now()
   }
 })
 

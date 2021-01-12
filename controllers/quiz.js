@@ -3,9 +3,6 @@ const User = require("../models/user")
 const mongoose = require('mongoose')
 const QuizWinner= require('../models/quizWinner')
 
-//? NO FUNCTIONS TO EXPORT YET 
-
-
 exports.saveQuizUser = async (req, res) => {
     try {
         const currentUser = req.body
@@ -25,6 +22,15 @@ exports.saveQuizWinner = async (req, res) => {
         const newWinner = new QuizWinner(currentWinner)
         const savedWinner = await newWinner.save()
         res.send('Winner Saved')
+    } catch (error) {
+        res.json({ errorMsg: error })
+    }
+}
+
+exports.showWinners = async (req, res) => {
+    try {
+        const winners = await QuizWinner.find({})
+        res.json(winners)
     } catch (error) {
         res.json({ errorMsg: error })
     }
