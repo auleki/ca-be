@@ -8,9 +8,15 @@ const subscriberSchema = new Schema({
     trim: true,
     lowercase: true
   },
+  email: {
+    type: String,
+    required: true,
+    trim: true,
+    lowercase: true
+  },
   joinedAt: {
     type: Date,
-    default: Date.now
+    default: Date.now()
   }
 })
 

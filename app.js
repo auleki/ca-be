@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 const clothRouter = require('./routes/cloth');
 const orderRouter = require('./routes/orders');
 const userRouter = require('./routes/user')
+const subscribeRouter = require('./routes/subscribers')
 const quizRouter = require('./routes/quiz')
 
 const DB_URL = process.env.MONGODB_URL;
@@ -42,6 +43,7 @@ app.use(`${baseUrl}/clothing`, clothRouter);
 app.use(`${baseUrl}/orders`, orderRouter)
 app.use(`${baseUrl}/user`, userRouter)
 app.use(`${baseUrl}/quiz`, quizRouter)
+app.use(`${baseUrl}/subscribers`, subscribeRouter)
 
 const PORT = process.env.PORT || 5000;
 

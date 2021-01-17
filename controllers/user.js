@@ -1,6 +1,6 @@
 const UserModel = require("../models/user");
 const ClothingModel = require("../models/clothSection")
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 
 exports.saveUser = async (req, res) => {
   // const { email, firstName, lastName, scores } = req.body;
@@ -16,7 +16,6 @@ exports.saveUser = async (req, res) => {
   } 
   catch (error) {
       res.send(error)
-      console.log(error)
   }
 };
 
@@ -35,10 +34,7 @@ exports.findUser = async (req, res) => {
 exports.viewUsers = async (req, res) => {
   try {
     const users = await UserModel.find({})
-    // const clothes = await ClothingModel.find({})
-    // res.json(clothes)
-    res.json(users)
-    // res.json({ msg: "No users" })
+    res.send(users)
   } catch (error) {
     res.json(error)
   }
