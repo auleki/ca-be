@@ -13,6 +13,10 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
+    lastPlayed: {
+        type: Date,
+        default: Date.now
+    },
     lastName: {
         type: String,
         required: true

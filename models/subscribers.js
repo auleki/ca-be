@@ -2,9 +2,15 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const subscriberSchema = new Schema({
-  email: {
+  firstName: {
     type: String,
-    required: true,
+    // required: true,
+    trim: true,
+    lowercase: true
+  },
+  lastName: {
+    type: String,
+    // required: true,
     trim: true,
     lowercase: true
   },

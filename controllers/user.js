@@ -22,10 +22,11 @@ exports.saveUser = async (req, res) => {
 exports.findUser = async (req, res) => {
     try {
         const { username } = req.params
-        const currentUser = UserModel.findOne({ 
-          email: username 
+        console.log("USERNAME:", username)
+        const currentUser = await UserModel.findOne({ 
+          email: username
         })
-        res.send(currentUser)
+        res.json(currentUser)
     } catch (error) {
         res.send(error)
     }
