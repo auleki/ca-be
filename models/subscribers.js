@@ -6,13 +6,11 @@ const subscriberSchema = new Schema({
     type: String,
     // required: true,
     trim: true,
-    lowercase: true
   },
   lastName: {
     type: String,
     // required: true,
     trim: true,
-    lowercase: true
   },
   email: {
     type: String,
@@ -22,7 +20,7 @@ const subscriberSchema = new Schema({
   },
   joinedAt: {
     type: Date,
-    default: Date.now()
+    default: Date.now
   }
 })
 

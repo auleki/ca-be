@@ -3,8 +3,13 @@ const Subscriber = require('../models/subscribers');
 
 exports.addSubscriber = async (req, res) => {
   try {
-    const subscriber = req.body
-    const savedSubscriber = await subscriber.save();
+    const { firstName, lastName, email } = req.body
+    const newSubscriber = {
+      firstName, 
+      lastName, 
+      email
+    }
+    const savedSubscriber = await newSubscriber.save();
     res.send('New Subscriber Added')
   } catch (error) {
     res.send(error)
