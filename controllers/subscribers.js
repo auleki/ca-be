@@ -3,24 +3,34 @@ const Subscriber = require('../models/subscribers');
 
 exports.addSubscriber = async (req, res) => {
   try {
-    const { firstName, lastName, email } = req.body
-    const newSubscriber = {
-      firstName, 
-      lastName, 
-      email
+    let subscriberInfo;
+    
+    console.log("Request Recieved")
+
+    if (req.body.source === 'homepageForm') {  
+      subscriberInfo = {
+        email: req.body.email,
+        source: req.body.source,
+      }
+    } else {
+      const { firstName, lastName, email, source } = req.body
+      subscriberInfo = { firstName, lastName, source, email }
     }
-    const savedSubscriber = await newSubscriber.save();
-    res.send('New Subscriber Added')
+    // res.json({ msg: "Subscriber from somewhere else", data: req.body })
+    // console.log(subscriberInfo)
+    const newSubscriber = new Subscriber(subscriberInfo)
+    const savedSubscriber = await newSubscriber.save()
+    res.json({ msg: "Saving Subscriber", data: savedSubscriber})
   } catch (error) {
-    res.send(error)
+    res.json(error)
   } 
 }
 
 exports.viewSubscriber = async (req, res) => {
   try {
     const subscribers = await Subscriber.find({})
-    res.send(subscribers)
+    res.json(subscribers)
   } catch (error) {
-    res.send(error)
+    res.json(error)
   }
 }

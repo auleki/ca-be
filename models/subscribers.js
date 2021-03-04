@@ -12,6 +12,10 @@ const subscriberSchema = new Schema({
     // required: true,
     trim: true,
   },
+  source: {
+    type: String,
+    required: true
+  },
   email: {
     type: String,
     required: true,

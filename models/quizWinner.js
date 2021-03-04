@@ -15,6 +15,15 @@ const quizWinnerSchema = new Schema({
     required: true,
     scores: []
   },
+  username: {
+    type: String, 
+    required: true,
+  },
+  totalWins: {
+    type: Number,
+    default: 1,
+    required: true
+},
   wonAt: {
     type: Date,
     default: Date.now()

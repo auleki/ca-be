@@ -36,8 +36,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-
-
 const baseUrl = '/api'
 app.use(`${baseUrl}/clothing`, clothRouter);
 app.use(`${baseUrl}/orders`, orderRouter)

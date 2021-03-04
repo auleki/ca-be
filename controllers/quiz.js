@@ -21,7 +21,7 @@ exports.saveQuizWinner = async (req, res) => {
         const newWinner = new QuizWinner(currentWinner)
         const savedWinner = await newWinner.save()
         res.send('Winner Saved')
-        mongoose.connect.close()
+        // mongoose.connect.close()
     } catch (error) {
         res.json({ errorMsg: error })
     }
