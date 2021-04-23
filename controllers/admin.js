@@ -20,7 +20,7 @@ exports.login = async (req, res) => {
     const admin = await Admin.findOne({ username: req.body.username })
     const { username, password, scopes } = admin
     const adminInfo = { username, password, scopes }
-    const token = jwt.sign(adminInfo, config.JWT_SECRET)
+    const token = jwt.sign(adminInfo, 'santaClaus')
     res.cookie('token', token, { httpOnly: true })
     res.status(200).json({ token, username })
   } catch (error) {

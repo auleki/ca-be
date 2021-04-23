@@ -4,6 +4,13 @@ const app = express()
 const cors = require('cors')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
+const cookieParser = require('cookie-parser')
+
+// Middlewares
+app.use(cors())
+app.use(express.json())
+app.use(morgan('dev'))
+app.use(cookieParser())
 
 // Imports
 const clothRouter = require('./routes/cloth')
@@ -25,11 +32,6 @@ const mOptions = {
 mongoose.connect(DB_URL, mOptions, err => {
   err ? console.log('error while connecting', err) : console.log('DB Connected')
 })
-
-// Middlewares
-app.use(cors())
-app.use(express.json())
-app.use(morgan('dev'))
 
 app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*') // update to match the domain you will make the request from
