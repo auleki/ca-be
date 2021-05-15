@@ -1,63 +1,53 @@
-// cSModel - Cloth Section Model
-const clothSectionModel = require('../models/clothSection')
-const clothModel = require('../models/cloth')
-const mongoose = require('mongoose')
-const axios = require('axios')
+const Cloth = require('../models/cloth')
+const cloudinary = require('cloudinary').v2
+const config = require('../utils/config')
 
-exports.viewAllClothes = async (req, res) => {
-  // const dbUrl = 'http://localhost:5000/clothing'
+cloudinary.config({
+  cloud_name: config.CLOUD_NAME,
+  api_key: config.API_KEY,
+  api_secret: config.API_SECRET
+})
+
+exports.uploadCloth = async (req, res) => {
   try {
-    const data = await clothSectionModel.find({})
-    res.send(data)
+    const { name, price, category, imageUrl, inStock, productId } = req.body
+    const clothing = { name, price, category, imageUrl, inStock, productId }
+    console.log('CLOTHING INFO:', clothing)
+    const newCloth = new Cloth(clothing)
+    const savedCloth = await newCloth.save()
+    // const result = await cloudinary.uploader.upload(image.path)
+    res.json({ data: savedCloth, msg: 'success' })
   } catch (error) {
-    res.send(error)
-  }
-}
-
-exports.addCloth = async (req, res) => {
-  try {
-    const newSection = new clothSectionModel({
-      title: 'Robes',
-      products: [
-        {
-          name: 'Joggers 01',
-          price: 11000,
-          orderLink:
-            'https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20jogger%20for%20N11,000',
-          imageUrl:
-            'https://res.cloudinary.com/checkadigs/image/upload/v1601239415/joggers01_1_adf50r.png'
-        },
-        {
-          name: 'Elo Wears',
-          price: 11000,
-          orderLink:
-            'https://api.whatsapp.com/send?phone=2348130267643&text=Hi,%20I%20want%20to%20buy%20the%20black%20jogger%20for%20N11,000',
-          imageUrl:
-            'https://res.cloudinary.com/checkadigs/image/upload/v1601239416/joggers02_1_kcaimq.png'
-        }
-      ]
-    })
-
-    const savedSection = await newSection.save()
-    mongoose.connection.close()
-    res.send(savedSection)
-  } catch (error) {
-    res.send(error)
+    res.json(error)
   }
 }
 
 exports.updateCloth = async (req, res) => {
   try {
-    const name = req.params.name
-    const { updateData } = req.body
-    const fetchedCloth = await clothSectionModel.findOneAndUpdate(
-      { name },
-      { $set: updateData },
-      { new: true }
-    )
-    console.log(fetchedCloth)
-    res.json({ msg: fetchedCloth })
+    let id, payload, options
+    id = req.params.id
+    // OFLOAD CONTENT OF REQ INTO PAYLOAD OBJ
+    // THEN PARSE PRICE TO NUMBER
+    payload = req.body
+    options = {
+      upsert: true
+    }
+    console.log('ID IN REQ: ', id)
+    console.log('REQ BODY: ', payload)
+    const updatedCloth = await Cloth.findOneAndUpdate(id, payload, options)
+    res.send(updatedCloth)
   } catch (error) {
-    res.json(error)
+    res.status(400).send(error)
+  }
+}
+
+exports.findCloth = async (req, res) => {
+  try {
+    let id, foundCloth
+    id = req.params.id
+    foundCloth = await Cloth.findOne({ _id: id })
+    res.json(foundCloth)
+  } catch (error) {
+    res.status(400).json(error)
   }
 }

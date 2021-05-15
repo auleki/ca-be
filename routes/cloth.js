@@ -1,17 +1,12 @@
 const router = require('express').Router()
-const fs = require('fs')
-const clothController = require('../controllers/cloth')
+const ClothController = require('../controllers/cloth')
+const upload = require('../utils/multer')
 
-router.get('/', clothController.viewAllClothes)
-
-router.patch('/update/:id', clothController.updateCloth)
-
-router.post('/', clothController.addCloth)
+router.post('/', ClothController.uploadCloth)
+// router.post('/', upload.single('image'), ClothController.uploadCloth)
+router.patch('/:id', ClothController.updateCloth)
+router.get('/:id', ClothController.findCloth)
 
 module.exports = router
 
-// router.get('/', (req, res) => {
-// res.sendFile(__dirname, 'data.json')
-//   const data = JSON.parse(fs.readFileSync('/app.js', 'utf8'))
-//   res.send(data)
-// })
+// 0149682663 GTB

@@ -1,9 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-const { Schema } = mongoose;
+const { Schema } = mongoose
 
 const clothSchema = new Schema({
   name: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  productId: {
     type: String,
     required: true,
     unique: true
@@ -16,39 +21,24 @@ const clothSchema = new Schema({
     type: Number,
     required: true
   },
+  inStock: {
+    type: Boolean,
+    required: true
+  },
   orderLink: {
+    type: String
+    // required: true
+  },
+  imageUrl: {
     type: String,
     required: true
   },
-  imgUrl: {
-    type: String,
-    required: true
+  color: {
+    type: String
+  },
+  sizes: {
+    type: [String]
   }
 })
 
-const ClothSchema = mongoose.model('cloth', clothSchema);
-
-module.exports = ClothSchema;
-
-
-
-
-// {
-//   "id": 909,
-//   "products": [
-//     { productName: "Cashmere", price: 15000 },
-//     { productName: "Cashmere", price: 1000 },
-//     { productName: "Cashmere", price: 500 },
-//     { productName: "Cashmere", price: 1300 },
-//     { productName: "Cashmere", price: 600 },
-//     { productName: "Cashmere", price: 800 },
-//   ],
-//   "discountCode": "XMAS-59",
-//   "orderNumber": "1X3927491GH0",
-//   "totalPrice": 35000,
-//   "userInfo": {
-//     name: "James Harden",
-//     city: "Houston, TX",
-//     email: "valder@gmail.com"
-//   }
-// }
+const ClothSchema = (module.exports = mongoose.model('cloth', clothSchema))

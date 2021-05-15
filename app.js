@@ -5,20 +5,24 @@ const cors = require('cors')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
-
+// const multer = require('multer')
 // Middlewares
 app.use(cors())
 app.use(express.json())
+// app.use(urlencoded({ extended: false }))
 app.use(morgan('dev'))
 app.use(cookieParser())
+// app.use(fileUpload())
 
 // Imports
-const clothRouter = require('./routes/cloth')
+const clothingRouter = require('./routes/clothing')
 const orderRouter = require('./routes/orders')
 const userRouter = require('./routes/user')
 const subscribeRouter = require('./routes/subscribers')
 const quizRouter = require('./routes/quiz')
 const adminRouter = require('./routes/admin')
+const clothRouter = require('./routes/cloth')
+const { urlencoded } = require('express')
 
 const DB_URL = process.env.MONGODB_URL
 
@@ -41,9 +45,11 @@ app.use(function (req, res, next) {
   )
   next()
 })
-
+//Base URL
 const baseUrl = '/api'
-app.use(`${baseUrl}/clothing`, clothRouter)
+
+app.use(`${baseUrl}/clothing`, clothingRouter)
+app.use(`${baseUrl}/cloth`, clothRouter)
 app.use(`${baseUrl}/orders`, orderRouter)
 app.use(`${baseUrl}/users`, userRouter)
 app.use(`${baseUrl}/quiz`, quizRouter)
