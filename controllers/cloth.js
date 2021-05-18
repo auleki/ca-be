@@ -24,6 +24,7 @@ exports.uploadCloth = async (req, res) => {
 
 exports.updateCloth = async (req, res) => {
   try {
+    // res.json({ msg: 'ABOUT TO UPDATE CLOTHES' })
     let id, payload, options
     id = req.params.id
     // OFLOAD CONTENT OF REQ INTO PAYLOAD OBJ
@@ -35,7 +36,7 @@ exports.updateCloth = async (req, res) => {
     console.log('ID IN REQ: ', id)
     console.log('REQ BODY: ', payload)
     const updatedCloth = await Cloth.findOneAndUpdate(id, payload, options)
-    res.send(updatedCloth)
+    res.status(200).send(updatedCloth)
   } catch (error) {
     res.status(400).send(error)
   }
@@ -45,7 +46,7 @@ exports.findCloth = async (req, res) => {
   try {
     let id, foundCloth
     id = req.params.id
-    foundCloth = await Cloth.findOne({ _id: id })
+    foundCloth = await Cloth.findOne({ productId: id })
     res.json(foundCloth)
   } catch (error) {
     res.status(400).json(error)
