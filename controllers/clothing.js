@@ -2,8 +2,7 @@
 const clothSectionModel = require('../models/clothSection')
 const clothModel = require('../models/cloth')
 const mongoose = require('mongoose')
-const axios = require('axios')
-const cloudinary = require('cloudinary').v2
+
 
 exports.viewAllClothes = async (req, res) => {
   // const dbUrl = 'http://localhost:5000/clothing'
@@ -18,10 +17,10 @@ exports.viewAllClothes = async (req, res) => {
 exports.addCloth = async (req, res) => {
   try {
     // const cloth = req.body.cloth
-    // const savedImage = await cloudinary.uploader.upload(
-    //   cloth.image,
-    //   (err, image) => console.console.log(err, image)
-    // )
+    const savedImage = await cloudinary.uploader.upload(
+      cloth.image,
+      (err, image) => console.console.log(err, image)
+    )
 
     const newCloth = {
       name: 'Eclairs Chocolate',

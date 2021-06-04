@@ -5,14 +5,14 @@ const cors = require('cors')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
+const fileUpload = require('express-fileupload')
 // const multer = require('multer')
 // Middlewares
 app.use(cors())
+app.use(fileUpload())
 app.use(express.json())
-// app.use(urlencoded({ extended: false }))
 app.use(morgan('dev'))
 app.use(cookieParser())
-// app.use(fileUpload())
 
 // Imports
 const clothingRouter = require('./routes/clothing')
