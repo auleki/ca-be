@@ -43,8 +43,8 @@ const clothSchema = new Schema({
 
 clothSchema.set('toJSON', {
   transform: (doc, returnedObject) => {
-    returnedObject.productId = returnedObject._id.toString()
-    delete returnedObject._id
+    // returnedObject.productId = returnedObject._id.toString()
+    // delete returnedObject._id
     delete returnedObject.__v
   }
 })
