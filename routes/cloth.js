@@ -7,5 +7,6 @@ router.post('/', ClothController.uploadCloth)
 router.post('/upload', ClothController.addCloth)
 router.patch('/:id', ClothController.updateCloth)
 router.get('/:id', ClothController.findCloth)
+router.delete('/:id', ClothController.deleteCloth)
 
 module.exports = router

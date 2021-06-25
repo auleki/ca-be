@@ -56,10 +56,20 @@ exports.uploadCloth = async (req, res) => {
   }
 }
 
+exports.deleteCloth = async (req, res) => {
+  try {
+    const id = req.params.id
+    const result = await Cloth.findByIdAndDelete(id)
+    // res.json({ data: result, msg: 'cloth deleted' })
+    res.json({ msg: 'cloth deleted' })
+  } catch (error) {
+    res.status(400).json({ msg: 'error occurred while updating cloth', error })
+  }
+}
+
 exports.updateCloth = async (req, res) => {
   try {
     let id = req.params.id
-    // let id = '00X53874CA'
     let payload = req.body
     let options = {
       upsert: false,
