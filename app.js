@@ -46,15 +46,15 @@ app.use(function (req, res, next) {
   next()
 })
 //Base URL
-const baseUrl = '/api'
+const versioning = '/api/v1'
 
-app.use(`${baseUrl}/clothing`, clothingRouter)
-app.use(`${baseUrl}/cloth`, clothRouter)
-app.use(`${baseUrl}/orders`, orderRouter)
-app.use(`${baseUrl}/users`, userRouter)
-app.use(`${baseUrl}/quiz`, quizRouter)
-app.use(`${baseUrl}/subscribers`, subscribeRouter)
-app.use(`${baseUrl}/admin`, adminRouter)
+app.use(`${versioning}/clothing`, clothingRouter)
+app.use(`${versioning}/cloth`, clothRouter)
+app.use(`${versioning}/orders`, orderRouter)
+app.use(`${versioning}/users`, userRouter)
+app.use(`${versioning}/quiz`, quizRouter)
+app.use(`${versioning}/subscribers`, subscribeRouter)
+app.use(`${versioning}/admin`, adminRouter)
 
 const PORT = process.env.PORT || 5001
 

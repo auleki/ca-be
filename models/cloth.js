@@ -29,15 +29,15 @@ const clothSchema = new Schema({
     type: String
     // required: true
   },
-  imageUrl: {
-    type: String,
+  imageUrls: {
+    type: [String],
     required: true
   },
   color: {
     type: String
   },
   sizes: {
-    type: [String]
+    type: []
   }
 })
 
