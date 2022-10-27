@@ -18,3 +18,11 @@ exports.createOrder = async (req, res) => {
     res.send(error);
   }
 };
+
+exports.editOrder = async (req, res) => {
+  try {
+    // edit order
+  } catch (error) {
+    // handle order edit error
+  }
+}
